@@ -3,33 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DJET Systems | Permanence</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <title>DJET Systems | Permanence by Design</title>
+    <meta name="description" content="DJET Systems designs and builds secure systems with permanence in mind. Don't trust. Verify. Then build to last." />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0A0A0A" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DJET Systems" />
+    <meta property="og:url" content="https://djet.online/" />
+    <meta property="og:title" content="DJET Systems: Permanence by Design" />
+    <meta property="og:description" content="Secure systems, built to last." />
+    <meta property="og:image" content="https://djet.online/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DJET Systems: Permanence by Design" />
+    <meta name="twitter:description" content="Secure systems, built to last." />
+    <meta name="twitter:image" content="https://djet.online/og-image.png" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <canvas id="topology-canvas"></canvas>
+    <canvas id="topology-canvas" aria-hidden="true"></canvas>
 
-    <header class="fixed-header">
-      <div class="logo">
-        <svg viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
-          <!-- Geometric djed pillar abstraction -->
-          <rect x="18" y="10" width="4" height="20" fill="currentColor"/>
-          <line x1="12" y1="12" x2="28" y2="12" />
-          <line x1="10" y1="18" x2="30" y2="18" />
-          <line x1="14" y1="24" x2="26" y2="24" />
-        </svg>
-      </div>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="DJET Systems">
+        <img src="/assets/brand/logos/svg/djet-horizontal-bone.svg" alt="DJET Systems" class="logo-horizontal" />
+      </a>
       <a href="#contact" class="btn-contact">Start a Conversation</a>
     </header>
 
-    <main class="scroll-container">
-      
-      <section class="panel">
+    <main class="scroll-container" id="top">
+
+      <section class="panel hero-panel">
         <div class="content">
+          <div class="mono-label">// DJET SYSTEMS — EST. FOR DECADES, NOT SPRINTS</div>
+          <div class="signal-bar"></div>
           <h1 class="massive-text">DJET<br>Systems.</h1>
+          <p class="hero-sub mono">Secure systems, designed to last.</p>
         </div>
       </section>
 
@@ -39,9 +57,15 @@
         </div>
       </section>
 
+      <section class="panel divider-panel" aria-hidden="true">
+        <div class="content">
+          <img src="/assets/brand/web/dividers/divider-bars-signal.svg" alt="" class="brand-divider" />
+        </div>
+      </section>
+
       <section class="panel">
         <div class="content">
-          <p class="large-text">Engineering should<br>outlive trends.</p>
+          <p class="large-text">Don't trust.<br>Verify. Then<br>build to last.</p>
         </div>
       </section>
 
@@ -59,15 +83,15 @@
 
       <section class="panel">
         <div class="content">
-          <div class="mono-label">// CORE VALUES</div>
-          <ul class="giant-list">
+           <div class="mono-label">// CORE VALUES</div>
+           <ul class="giant-list">
             <li>Order.</li>
             <li>Clarity.</li>
             <li>Resilience.</li>
             <li>Discipline.</li>
             <li>Longevity.</li>
             <li>Truth.</li>
-          </ul>
+           </ul>
         </div>
       </section>
 
@@ -112,6 +136,8 @@
       <section class="panel footer-panel">
         <div class="content">
           <h2 class="huge-text">Some software launches.<br>Some software lasts.</h2>
+          <img src="/assets/brand/logos/svg/djet-stacked-bone.svg" alt="DJET Systems" class="footer-logo" />
+          <p class="mono hash-line">sha256("Permanence by Design") = e63b9560cae46fa64e291dc5023b2f6098d929d801f918f23a7bca3e9d731c82</p>
           <p class="large-text accent-text mt-spacing">We build the latter.</p>
         </div>
       </section>

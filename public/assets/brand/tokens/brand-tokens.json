@@ -1,0 +1,26 @@
+{
+  "color": {
+    "ink": "#0A0A0A",
+    "bone": "#F2F0EA",
+    "signal": "#FF5A1F",
+    "signalDeep": "#B93204",
+    "graphite": "#1C1C1B",
+    "steel": "#3A3A38",
+    "concrete": "#8C8B86",
+    "mist": "#D9D7D0"
+  },
+  "font": {
+    "sans": "IBM Plex Sans",
+    "mono": "IBM Plex Mono"
+  },
+  "logo": {
+    "clearSpaceUnit": 149,
+    "minWidthPx": {
+      "horizontal": 140,
+      "stacked": 80,
+      "compact": 100,
+      "wordmark": 120,
+      "mark": 16
+    }
+  }
+}
