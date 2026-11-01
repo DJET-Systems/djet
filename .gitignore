@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local brand asset pack (source of truth, not distributed)
+DJET_visual_identity/
+
+# Local env artifacts
+.env
+.env.*
+!.env.example
+.npmrc
