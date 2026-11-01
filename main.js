@@ -117,3 +117,47 @@ if (canvas) {
   initNodes()
   animate()
 }
+
+// Contact form -> Web3Forms relay (anas@djet.online / ansgrb@gmail.com)
+const form = document.getElementById('contact-form');
+if (form) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const status = document.getElementById('form-status');
+  const originalText = submitBtn.textContent;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append('access_key', form.querySelector('[name="access_key"]').value);
+
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    status.textContent = '';
+    status.classList.remove('ok', 'error');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        status.textContent = '// Message transmitted. We will respond.';
+        status.classList.add('ok');
+        form.reset();
+      } else {
+        status.textContent = '// Error: ' + (data.message || 'Submission failed.');
+        status.classList.add('error');
+      }
+    } catch (error) {
+      status.textContent = '// Error: network unreachable. Try again.';
+      status.classList.add('error');
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}

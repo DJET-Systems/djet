@@ -403,3 +403,42 @@ body {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.btn-submit:disabled::before {
+  display: none;
+}
+
+.btn-submit:disabled:hover {
+  color: var(--djet-signal);
+}
+
+.contact-form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-status {
+  align-self: flex-start;
+  font-size: 0.9375rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  min-height: 1.4em;
+}
+
+.form-status.ok {
+  color: var(--djet-signal);
+}
+
+.form-status.error {
+  color: var(--djet-bone);
+  background: var(--djet-signal-deep);
+  padding: 0.25rem 0.75rem;
+}

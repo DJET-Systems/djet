@@ -118,7 +118,11 @@
       <section class="panel" id="contact">
         <div class="content">
            <div class="mono-label">// START A CONVERSATION</div>
-           <form class="contact-form" action="#" method="POST">
+           <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+             <input type="hidden" name="access_key" value="788c4bf6-1b5f-4548-91de-a9082b366170">
+             <input type="hidden" name="subject" value="New message from djet.online">
+             <input type="hidden" name="from_name" value="DJET Systems — Message Forum">
+             <input type="checkbox" name="botcheck" class="contact-form-honeypot" tabindex="-1" aria-hidden="true">
              <div class="form-group">
                <input type="text" id="name" name="name" placeholder="Name" required>
              </div>
@@ -129,6 +133,7 @@
                <textarea id="message" name="message" placeholder="Message" rows="2" required></textarea>
              </div>
              <button type="submit" class="btn-submit">Initialize</button>
+             <p class="form-status mono" id="form-status" role="status" aria-live="polite"></p>
            </form>
         </div>
       </section>
