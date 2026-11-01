@@ -129,7 +129,6 @@ if (form) {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append('access_key', form.querySelector('[name="access_key"]').value);
 
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
