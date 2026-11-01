@@ -1,0 +1,30 @@
+:root {
+  --djet-ink: #0A0A0A;
+  --djet-bone: #F2F0EA;
+  --djet-signal: #FF5A1F;
+  --djet-signal-deep: #B93204;
+  --djet-graphite: #1C1C1B;
+  --djet-steel: #3A3A38;
+  --djet-concrete: #8C8B86;
+  --djet-mist: #D9D7D0;
+
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* semantic, light */
+  --bg: var(--djet-bone);
+  --fg: var(--djet-ink);
+  --muted: var(--djet-steel);
+  --line: var(--djet-mist);
+  --accent: var(--djet-signal);
+  --accent-text: var(--djet-signal-deep);   /* Signal fails as text on Bone */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--djet-ink);
+    --fg: var(--djet-bone);
+    --muted: var(--djet-concrete);
+    --line: #2B2B2A;
+    --accent-text: var(--djet-signal);
+  }
+}

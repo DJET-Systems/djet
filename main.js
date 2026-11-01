@@ -69,7 +69,7 @@ if (canvas) {
     draw() {
       ctx.beginPath()
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-      ctx.fillStyle = '#6E7681'
+      ctx.fillStyle = '#8C8B86'
       ctx.fill()
     }
   }
@@ -93,7 +93,7 @@ if (canvas) {
           ctx.moveTo(nodes[i].x, nodes[i].y)
           ctx.lineTo(nodes[j].x, nodes[j].y)
           const opacity = 1 - (distance / connectionDistance)
-          ctx.strokeStyle = `rgba(110, 118, 129, ${opacity * 0.2})`
+          ctx.strokeStyle = `rgba(140, 139, 134, ${opacity * 0.2})`
           ctx.lineWidth = 1
           ctx.stroke()
         }
